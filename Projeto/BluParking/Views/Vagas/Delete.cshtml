@@ -1,0 +1,88 @@
+﻿@model BluParking.Models.Vaga
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = null;
+}
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+<!-- Modal -->
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel">Deletar</h4>
+        </div>
+        <div class="modal-body">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.TabelaPreco.TabelaPrecoID)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TabelaPreco.TabelaPrecoID)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Placa)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Placa)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Entrada)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Entrada)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Saida)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Saida)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Duracao)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Duracao)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Tempo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Tempo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ValorPagar)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ValorPagar)
+                </dd>
+
+            </dl>
+        </div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="modal-footer">
+                @Html.ActionLink("Voltar", "Index", "", new { @class = "btn btn-default" })
+                <input type="submit" value="Deletar" class="btn btn-danger" />
+            </div>
+        }
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>

@@ -1,0 +1,114 @@
+﻿@model IEnumerable<BluParking.Models.Vaga>
+
+@{
+    ViewBag.Title = "Vagas";
+}
+   
+<div>
+    @Html.ActionLink("Entrada", "Create", "", new { @class = "btn btn-success text-uppercase button-space entrada" })
+</div>
+
+
+<table id="tbVagas" class="table table-hover table-bordered dt-responsive nowrap">
+    <thead>
+        <tr>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Placa)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Entrada)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Saida)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Duracao)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Tempo)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.TabelaPreco.TabelaPrecoID)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.ValorPagar)
+            </th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Placa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Entrada)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Saida)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Duracao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tempo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TabelaPreco.Preco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValorPagar)
+                </td>
+                <td>
+
+                    @Html.ActionLink("Saída", "Edit", new { id = item.VagaID }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Detalhar", "Details", new { id = item.VagaID }, new { @class = "btn btn-warning" })
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.VagaID }, new { @class = "btn btn-danger" })
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="modal fade">
+
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#tbVagas').DataTable({
+                "language": {
+                    "sEmptyTable": "Nenhum registro encontrado",
+                    "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                    "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+                    "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+                    "sInfoPostFix": "",
+                    "sInfoThousands": ".",
+                    "sLengthMenu": "_MENU_ resultados por página",
+                    "sLoadingRecords": "Carregando...",
+                    "sProcessing": "Processando...",
+                    "sZeroRecords": "Nenhum registro encontrado",
+                    "sSearch": "Pesquisar",
+                    "oPaginate": {
+                        "sNext": "Próximo",
+                        "sPrevious": "Anterior",
+                        "sFirst": "Primeiro",
+                        "sLast": "Último"
+                    },
+                    "oAria": {
+                        "sSortAscending": ": Ordenar colunas de forma ascendente",
+                        "sSortDescending": ": Ordenar colunas de forma descendente"
+                    }
+                },
+            });
+        });
+    </script>
+
+}
+
+
+

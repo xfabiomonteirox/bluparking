@@ -1,0 +1,58 @@
+﻿@model BluParking.Models.TabelaPreco
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = null;
+}
+
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+<!-- Modal -->
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel">Deletar</h4>
+        </div>
+        <div class="modal-body">
+
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.DataInicio)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DataInicio)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DataFim)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DataFim)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Preco)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Preco)
+                </dd>
+            </dl>
+        </div>
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+
+            <div class="modal-footer">
+                @Html.ActionLink("Voltar", "Index", "", new { @class = "btn btn-default" })
+                <input type="submit" value="Deletar" class="btn btn-danger" />
+            </div>
+        }
+    </div>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
