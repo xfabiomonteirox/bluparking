@@ -1,6 +1,5 @@
 # BluParking - Sistema de Controle de Estacionamento
 
---
 ## Objetivo: 
 
 Desenvolver um aplicativo simples para controle de estacionamento onde o usuário poderá registrar a entrada e saída dos veículos. 
