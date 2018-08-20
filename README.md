@@ -27,6 +27,6 @@ Utilizar a placa do veículo como chave de busca.
 
 **Front-End:**
 * HTML5/CSS3
-* Bootstrap
+* Bootstrap 4
 * jQuery
 * jQuery - DataTables
