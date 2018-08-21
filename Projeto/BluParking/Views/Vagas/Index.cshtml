@@ -3,11 +3,14 @@
 @{
     ViewBag.Title = "Vagas";
 }
-   
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+
 <div>
     @Html.ActionLink("Entrada", "Create", "", new { @class = "btn btn-success text-uppercase button-space entrada" })
 </div>
-
 
 <table id="tbVagas" class="table table-hover table-bordered dt-responsive nowrap">
     <thead>
@@ -50,7 +53,7 @@
                     @Html.DisplayFor(modelItem => item.Saida)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Duracao)
+                    @Html.DisplayFor(modelItem => item.Duracao, new { htmlAttributes = new { @class = "date" } })
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Tempo)
@@ -59,7 +62,7 @@
                     @Html.DisplayFor(modelItem => item.TabelaPreco.Preco)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ValorPagar)
+                    @Html.DisplayFor(modelItem => item.ValorPagar, new { @class = "money" })
                 </td>
                 <td>
 
@@ -73,11 +76,8 @@
     </tbody>
 </table>
 
-<div class="modal fade">
-
-</div>
-
 @section scripts{
+
     <script>
         $(document).ready(function () {
             $('#tbVagas').DataTable({
@@ -106,8 +106,8 @@
                 },
             });
         });
-    </script>
 
+    </script>
 }
 
 

@@ -42,8 +42,7 @@ namespace BluParking.Controllers
         public ActionResult Create()
         {
             Vaga vaga = new Vaga();
-            var data = DateTime.Now;
-            vaga.Entrada = data;
+            vaga.Entrada = DateTime.Now;
             ViewBag.TabelaPrecoID = new SelectList(db.TabelaPrecos.Where(t => t.DataInicio <= DateTime.Now && t.DataFim >= DateTime.Now), "TabelaPrecoID", "Preco");
             return View(vaga);
         }
@@ -108,9 +107,6 @@ namespace BluParking.Controllers
                 var total = preco * tempoDecorrido.Hours;
                 vaga.ValorPagar = total + horaInicial;
             }
-
-            Console.Write(tempoDecorrido);
-
 
             return View(vaga);
         }

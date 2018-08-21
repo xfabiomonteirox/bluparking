@@ -10,22 +10,21 @@ namespace BluParking.Models
     {
         public int VagaID { get; set; }
         [Required]
-        [Column(Order = 1)]
         public string Placa { get; set; }
-        [Column(Order = 2)]
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm}", ApplyFormatInEditMode = true)]
         public DateTime Entrada { get; set; }
-        [Column(Order = 3)]
         [DisplayName("Saída")]
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm}", ApplyFormatInEditMode = true)]
         public DateTime? Saida { get; set; }
-        [Column(Order = 4)]
         [DisplayName("Duração")]
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm}", ApplyFormatInEditMode = true)]
         public string Duracao { get; set; }
-        [Column(Order = 5)]
         public int? Tempo { get; set; }
-        [Column(Order = 7)]
         [DisplayName("Valor a Pagar")]
         public double? ValorPagar { get; set; }
-        [Column(Order = 6)]
         public int? TabelaPrecoID { get; set; }
         
         [ForeignKey("TabelaPrecoID")]

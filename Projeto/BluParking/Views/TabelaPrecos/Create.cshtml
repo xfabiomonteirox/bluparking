@@ -25,7 +25,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.DataInicio, htmlAttributes: new { @class = "control-label col-md-4" })
                         <div class="col-md-6">
-                            @Html.EditorFor(model => model.DataInicio, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.EditorFor(model => model.DataInicio, new { htmlAttributes = new { @class = "form-control date_time" } })
                             @Html.ValidationMessageFor(model => model.DataInicio, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.DataFim, htmlAttributes: new { @class = "control-label col-md-4" })
                         <div class="col-md-6">
-                            @Html.EditorFor(model => model.DataFim, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.EditorFor(model => model.DataFim, new { htmlAttributes = new { @class = "form-control date_time" } })
                             @Html.ValidationMessageFor(model => model.DataFim, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.Preco, htmlAttributes: new { @class = "control-label col-md-4" })
                         <div class="col-md-6">
-                            @Html.EditorFor(model => model.Preco, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.EditorFor(model => model.Preco, new { htmlAttributes = new { @class = "form-control money" } })
                             @Html.ValidationMessageFor(model => model.Preco, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -49,7 +49,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.PrecoHoraAdicional, htmlAttributes: new { @class = "control-label col-md-4" })
                         <div class="col-md-6">
-                            @Html.EditorFor(model => model.PrecoHoraAdicional, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.EditorFor(model => model.PrecoHoraAdicional, new { htmlAttributes = new { @class = "form-control money" } })
                             @Html.ValidationMessageFor(model => model.PrecoHoraAdicional, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -65,3 +65,5 @@
 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>
 <script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/bluparking.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>

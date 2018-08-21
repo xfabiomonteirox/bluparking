@@ -24,7 +24,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.Placa, htmlAttributes: new { @class = "control-label col-md-4" })
                         <div class="col-md-6">
-                            @Html.EditorFor(model => model.Placa, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                            @Html.EditorFor(model => model.Placa, new { htmlAttributes = new { @class = "form-control placa", @readonly = "readonly" } })
                             @Html.ValidationMessageFor(model => model.Placa, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.Entrada, htmlAttributes: new { @class = "control-label col-md-4" })
                         <div class="col-md-6">
-                            @Html.EditorFor(model => model.Entrada, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                            @Html.EditorFor(model => model.Entrada, new { htmlAttributes = new { @class = "form-control date_time", @readonly = "readonly" } })
                             @Html.ValidationMessageFor(model => model.Entrada, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.Saida, htmlAttributes: new { @class = "control-label col-md-4" })
                         <div class="col-md-6">
-                            @Html.EditorFor(model => model.Saida, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                            @Html.EditorFor(model => model.Saida, new { htmlAttributes = new { @class = "form-control date_time", @readonly = "readonly" } })
                             @Html.ValidationMessageFor(model => model.Saida, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.Duracao, htmlAttributes: new { @class = "control-label col-md-4" })
                         <div class="col-md-6">
-                            @Html.EditorFor(model => model.Duracao, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                            @Html.EditorFor(model => model.Duracao, new { htmlAttributes = new { @class = "form-control time", @readonly = "readonly" } })
                             @Html.ValidationMessageFor(model => model.Duracao, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.TabelaPrecoID, "Preço", htmlAttributes: new { @class = "control-label col-md-4" })
                         <div class="col-md-6">
-                            @Html.DropDownList("TabelaPrecoID", null, htmlAttributes: new { @class = "form-control", @readonly = "readonly" })
+                            @Html.DropDownList("TabelaPrecoID", null, htmlAttributes: new { @class = "form-control ", @readonly = "readonly" })
                             @Html.ValidationMessageFor(model => model.TabelaPrecoID, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -89,3 +89,5 @@
 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>
 <script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/bluparking.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>

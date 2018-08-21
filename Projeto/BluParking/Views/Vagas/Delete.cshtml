@@ -16,14 +16,6 @@
         <div class="modal-body">
             <dl class="dl-horizontal">
                 <dt>
-                    @Html.DisplayNameFor(model => model.TabelaPreco.TabelaPrecoID)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.TabelaPreco.TabelaPrecoID)
-                </dd>
-
-                <dt>
                     @Html.DisplayNameFor(model => model.Placa)
                 </dt>
 
@@ -61,6 +53,22 @@
 
                 <dd>
                     @Html.DisplayFor(model => model.Tempo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.TabelaPreco.Preco)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TabelaPreco.Preco)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.TabelaPreco.PrecoHoraAdicional)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TabelaPreco.PrecoHoraAdicional)
                 </dd>
 
                 <dt>

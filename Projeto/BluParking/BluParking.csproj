@@ -137,7 +137,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
@@ -245,6 +245,18 @@
     <Compile Include="Migrations\201808191921197_Add_HoraAdicional.Designer.cs">
       <DependentUpon>201808191921197_Add_HoraAdicional.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808210005522_Add_DataTypeVagaModel1.cs" />
+    <Compile Include="Migrations\201808210005522_Add_DataTypeVagaModel1.Designer.cs">
+      <DependentUpon>201808210005522_Add_DataTypeVagaModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808210012050_Add_DataTypeVagaModel2.cs" />
+    <Compile Include="Migrations\201808210012050_Add_DataTypeVagaModel2.Designer.cs">
+      <DependentUpon>201808210012050_Add_DataTypeVagaModel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808210014447_Add_DataTypeVagaModel3.cs" />
+    <Compile Include="Migrations\201808210014447_Add_DataTypeVagaModel3.Designer.cs">
+      <DependentUpon>201808210014447_Add_DataTypeVagaModel3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\TabelaPreco.cs" />
     <Compile Include="Models\Vaga.cs" />
@@ -255,7 +267,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
-    <Content Include="Views\Vagas\Saida.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -323,6 +334,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808191921197_Add_HoraAdicional.resx">
       <DependentUpon>201808191921197_Add_HoraAdicional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808210005522_Add_DataTypeVagaModel1.resx">
+      <DependentUpon>201808210005522_Add_DataTypeVagaModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808210012050_Add_DataTypeVagaModel2.resx">
+      <DependentUpon>201808210012050_Add_DataTypeVagaModel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808210014447_Add_DataTypeVagaModel3.resx">
+      <DependentUpon>201808210014447_Add_DataTypeVagaModel3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
